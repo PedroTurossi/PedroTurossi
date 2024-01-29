@@ -18,7 +18,7 @@
     <img src="https://github-readme-stats.vercel.app/api?username=PedroTurossi&show_icons=true" style="width: 50%; height: 100%; object-fit: cover;" />
   </picture>
   
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroTurossi&layout=compact"  style="flex: 2; width: 50%;">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroTurossi&layout=donut"  style="flex: 2; width: 50%;">
 </div>
 
 <hr>
