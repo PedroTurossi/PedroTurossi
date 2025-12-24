@@ -1,23 +1,14 @@
 # Oi
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,php,py,c,java,mysql" />
+    <img src="https://skillicons.dev/icons?i=py,c,html,css,js,php,java,mysql" />
   </a>
 </p>
 <hr>
+  <p align="left">
+    <img src="https://komarev.com/ghpvc/?username=PedroTurossi&label=Profile%20views&color=0e75b6&style=flat" alt="PedroTurossi" />
+  </p>
 <div style="display: flex; align-items: center; justify-content: space-between;">
-  <picture style="flex: 1; margin-right: 10px;">
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=PedroTurossi&show_icons=true&theme=dark"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=PedroTurossi&show_icons=true"
-      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-    />
-    <img src="https://github-readme-stats.vercel.app/api?username=PedroTurossi&show_icons=true" style="width: 50%; height: 100%; object-fit: cover;" />
-  </picture>
-  
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroTurossi&layout=donut"  style="flex: 2; width: 49%;">
 </div>
 
