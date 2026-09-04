@@ -9,7 +9,7 @@
     <img src="https://komarev.com/ghpvc/?username=PedroTurossi&label=Profile%20views&color=0e75b6&style=flat" alt="PedroTurossi" />
   </p>
   
-  ![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=pedroturossi&langs_count=6&show_icons=true&theme=dark)
+  ![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=pedroturossi&langs_count=6&theme=dark)
 
 <hr>
   
