@@ -1,0 +1,13 @@
+{
+  "name": "pedroturossi-terminal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate.mjs",
+    "preview": "node scripts/generate.mjs --offline",
+    "demo": "node scripts/generate.mjs --demo"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

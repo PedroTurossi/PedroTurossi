@@ -1,0 +1,111 @@
+{
+  "username": "PedroTurossi",
+  "locale": "en",
+  "timezone": "America/Sao_Paulo",
+  "prompt": {
+    "user": "pedro",
+    "host": "turossi"
+  },
+  "profile": {
+    "name": "Pedro H. Turossi",
+    "description": "Just a student who builds algorithms... and games maybe?"
+  },
+  "focus": [
+    {
+      "tag": "algo",
+      "text": "Algorithms, data structures, problem solving"
+    },
+    {
+      "tag": "game",
+      "text": "Game dev: gameplay systems and rhythm games"
+    }
+  ],
+  "neofetch": {
+    "command": "neofetch",
+    "fields": [
+      "name",
+      "description",
+      "focus",
+      "extra",
+      "repos",
+      "commits",
+      "followers",
+      "views",
+      "languages",
+      "palette"
+    ],
+    "extra": [
+      {
+        "label": "Location",
+        "value": "RS, Brazil"
+      }
+    ],
+    "logo": "tux-svg"
+  },
+  "projects": {
+    "command": "tmux attach -t projects",
+    "items": [
+      {
+        "path": "~/projects/nine-lanes",
+        "name": "Nine Lanes",
+        "description": "Rhythm game inspired by Guitar Hero, played across 9 note lanes.",
+        "status": "in development",
+        "art": "rhythm"
+      },
+      {
+        "path": "~/projects/shipping",
+        "name": "Shipping System",
+        "description": "Production helper for the closing and shipping stages of products.",
+        "status": "in development",
+        "art": "pipeline"
+      },
+      {
+        "path": "~/projects/homelab",
+        "name": "Homelab",
+        "description": "Lab for pentesting and for hosting and managing my own open source apps.",
+        "status": "ongoing",
+        "art": "homelab"
+      },
+      {
+        "path": "~/projects/next",
+        "name": "Open Project",
+        "description": "Reserved for the next idea.",
+        "status": "to be decided",
+        "art": "open"
+      }
+    ]
+  },
+  "languages": {
+    "count": 6,
+    "exclude": [],
+    "colors": "rainbow",
+    "includePrivate": false
+  },
+  "stats": {
+    "countPrivateContributions": false
+  },
+  "boot": {
+    "enabled": true,
+    "lines": []
+  },
+  "animation": {
+    "enabled": true,
+    "speed": "medium"
+  },
+  "effects": {
+    "glow": true,
+    "scanlines": true,
+    "vignette": true,
+    "statusBar": true
+  },
+  "layout": {
+    "width": 900,
+    "fontSize": 14,
+    "lineHeight": 1.6,
+    "barCells": 20
+  },
+  "theme": {
+    "palette": {},
+    "roles": {}
+  }
+}

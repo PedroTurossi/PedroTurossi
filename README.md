@@ -1,29 +1,7 @@
-# Oi
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,cs,java,bash,c,html,css,js,php,mysql" />
-  </a>
-</p>
-<hr>
-  <p align="left">
-    <img src="https://komarev.com/ghpvc/?username=PedroTurossi&label=Profile%20views&color=0e75b6&style=flat" alt="PedroTurossi" />
-  </p>
-  
-  ![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=pedroturossi&langs_count=6&theme=dark)
+<div align="center">
 
-<hr>
-  
+<img src="./assets/terminal.svg" alt="Gruvbox terminal for Pedro H. Turossi: neofetch with a pixel-art Tux standing before a giant golden moon, profile, focus areas, languages and GitHub stats, followed by tmux panes for the projects Nine Lanes, Shipping System, Homelab and an open project" width="100%">
 
-<!--
-  créditos: (https://github.com/anuraghazra/github-readme-stats)
--->
-<!-- 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
---> 
+</div>
+
+<img src="https://komarev.com/ghpvc/?username=PedroTurossi" width="1" height="1" alt="">
