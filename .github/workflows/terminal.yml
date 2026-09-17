@@ -1,0 +1,48 @@
+name: terminal
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"   # every 6 hours
+  workflow_dispatch:          # "Run workflow" button in the Actions tab
+  push:
+    paths:
+      - config.json
+      - scripts/**
+      - assets/fonts/**
+      - assets/logos/**
+      - .github/workflows/terminal.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: terminal
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Collect telemetry and render
+        run: node scripts/generate.mjs
+        env:
+          # Optional: create a TERMINAL_TOKEN secret (PAT) to include private data.
+          GH_TOKEN: ${{ secrets.TERMINAL_TOKEN || github.token }}
+
+      - name: Publish
+        run: |
+          git add assets/terminal.svg data/telemetry.json
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(terminal): sync telemetry"
+          git push
