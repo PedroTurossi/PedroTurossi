@@ -38,7 +38,7 @@ jobs:
         env:
           # github.token reads public data. Create a TERMINAL_TOKEN secret (a PAT)
           # only if you want private repositories/contributions counted.
-          GH_TOKEN: ${{ secrets.TERMINAL_TOKEN || github.token }}
+          GH_TOKEN: ${{ secrets.TERMINAL_READONLY_TOKEN || github.token }}
 
       - name: Render assets/terminal.svg
         run: python scripts/render.py
