@@ -1,4 +1,5 @@
 {
+  "_leia_me": "Edite este arquivo e faça commit. O workflow coleta a telemetria e redesenha assets/terminal.svg sozinho. Chaves que começam com _ são só anotações. Guia completo em docs/CONFIG.md.",
   "username": "PedroTurossi",
   "locale": "en",
   "timezone": "America/Sao_Paulo",
@@ -7,24 +8,104 @@
     "host": "turossi"
   },
   "profile": {
-    "name": "Pedro H. Turossi",
-    "description": "Just a student who builds algorithms... and games maybe?"
+    "_nota": "label = the key on the left (in yellow); value = the text. The Bio wraps on its own; \\n forces a line break.",
+    "name": {
+      "label": "Name",
+      "value": "Pedro H. Turossi"
+    },
+    "bio": {
+      "label": "Bio",
+      "value": "Just a student who builds algorithms... and games maybe?"
+    }
   },
   "focus": [
     {
-      "tag": "algo",
-      "text": "Algorithms, data structures, problem solving"
+      "label": "coding",
+      "value": " - data structures and problem solving"
     },
     {
-      "tag": "game",
-      "text": "Game dev: gameplay systems and rhythm games"
+      "label": "gameDev",
+      "value": " - gameplay systems, mechanics and game design"
     }
   ],
+  "languages": {
+    "_nota": "count = how many languages the telemetry collects AND the terminal shows.",
+    "count": 6,
+    "exclude": ["HTML", "CSS"],
+    "colors": "github",
+    "includePrivate": true
+  },
+  "labels": {
+    "repos": "Repos",
+    "commits": "Commits",
+    "followers": "Followers",
+    "views": "Views",
+    "languages": "Languages"
+  },
+  "projects": {
+    "command": "tmux attach -t projects",
+    "_borderColors": "Default border colors used when a project has no borderColor. Use palette names (yellow, aqua, orange...) or hex colors (#ffaa00).",
+    "borderColors": ["yellow", "aqua", "orange", "purple"],
+    "statuses": {
+      "_nota": "Each project's \"status\" must be one of these keys. text = what is shown; color = palette name or hex.",
+      "developed": {
+        "text": "developed",
+        "color": "green"
+      },
+      "in development": {
+        "text": "in development",
+        "color": "green"
+      },
+      "ongoing": {
+        "text": "ongoing",
+        "color": "green"
+      },
+      "planning": {
+        "text": "planning",
+        "color": "yellow"
+      }
+    },
+    "items": [
+      {
+        "path": "~/projects/keyboard-hero",
+        "name": "Keyboard Hero",
+        "description": "Rhythm game inspired by Guitar Hero, played across 9 note lanes.",
+        "status": "in development",
+        "borderColor": "aqua_dim",
+        "art": "rhythm"
+      },
+      {
+        "path": "~/projects/shipping",
+        "name": "Shipping System",
+        "description": "Production helper for the closing and shipping stages of products.",
+        "status": "in development",
+        "borderColor": "yellow",
+        "art": "pipeline"
+      },
+      {
+        "path": "~/projects/homelab",
+        "name": "Homelab",
+        "description": "Lab for pentesting and for hosting and managing my own open source apps.",
+        "status": "ongoing",
+        "borderColor": "orange_dim",
+        "art": "homelab"
+      },
+      {
+        "path": "~/projects/next",
+        "name": "Open Project",
+        "description": "Reserved for the next idea.",
+        "status": "planning",
+        "borderColor": "purple",
+        "art": "open"
+      }
+    ]
+  },
   "neofetch": {
-    "command": "neofetch",
+    "command": "neofetch -XD",
+    "logo": "tux-svg",
     "fields": [
       "name",
-      "description",
+      "bio",
       "focus",
       "extra",
       "repos",
@@ -39,47 +120,57 @@
         "label": "Location",
         "value": "RS, Brazil"
       }
-    ],
-    "logo": "tux-svg"
-  },
-  "projects": {
-    "command": "tmux attach -t projects",
-    "items": [
-      {
-        "path": "~/projects/nine-lanes",
-        "name": "Nine Lanes",
-        "description": "Rhythm game inspired by Guitar Hero, played across 9 note lanes.",
-        "status": "in development",
-        "art": "rhythm"
-      },
-      {
-        "path": "~/projects/shipping",
-        "name": "Shipping System",
-        "description": "Production helper for the closing and shipping stages of products.",
-        "status": "in development",
-        "art": "pipeline"
-      },
-      {
-        "path": "~/projects/homelab",
-        "name": "Homelab",
-        "description": "Lab for pentesting and for hosting and managing my own open source apps.",
-        "status": "ongoing",
-        "art": "homelab"
-      },
-      {
-        "path": "~/projects/next",
-        "name": "Open Project",
-        "description": "Reserved for the next idea.",
-        "status": "to be decided",
-        "art": "open"
-      }
     ]
   },
-  "languages": {
-    "count": 6,
-    "exclude": [],
-    "colors": "rainbow",
-    "includePrivate": false
+  "theme": {
+    "_mensagem": "essa aqui é a palheta padrão, o tema que eu deixei default é o Gruvbox, mas tu pode alterar aqui sem muitos problemas",
+    "palette": {
+      "bg0_h": "#1d2021",
+      "bg0": "#282828",
+      "bg1": "#3c3836",
+      "bg2": "#504945",
+      "bg3": "#665c54",
+      "bg4": "#7c6f64",
+      "fg0": "#fbf1c7",
+      "fg1": "#ebdbb2",
+      "fg2": "#d5c4a1",
+      "fg3": "#bdae93",
+      "fg4": "#a89984",
+      "gray": "#928374",
+      "red": "#fb4934",
+      "green": "#b8bb26",
+      "yellow": "#fabd2f",
+      "blue": "#83a598",
+      "purple": "#d3869b",
+      "aqua": "#8ec07c",
+      "orange": "#fe8019",
+      "red_dim": "#cc241d",
+      "green_dim": "#98971a",
+      "yellow_dim": "#d79921",
+      "blue_dim": "#458588",
+      "purple_dim": "#b16286",
+      "aqua_dim": "#689d6a",
+      "orange_dim": "#d65d0e"
+    },
+    "roles": {
+      "background": "bg0_h",
+      "surface": "bg0",
+      "raised": "bg1",
+      "border": "bg2",
+      "faint": "bg3",
+      "text": "fg1",
+      "bright": "fg0",
+      "soft": "fg3",
+      "muted": "gray",
+      "accent": "yellow",
+      "secondary": "orange",
+      "prompt": "aqua",
+      "ok": "green",
+      "info": "blue",
+      "error": "red",
+      "special": "purple",
+      "cursor": "fg1"
+    }
   },
   "stats": {
     "countPrivateContributions": false
@@ -103,9 +194,5 @@
     "fontSize": 14,
     "lineHeight": 1.6,
     "barCells": 20
-  },
-  "theme": {
-    "palette": {},
-    "roles": {}
   }
 }

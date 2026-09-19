@@ -1,5 +1,8 @@
 name: terminal
 
+# Collects GitHub telemetry for the `username` in config.json and redraws
+# assets/terminal.svg. Python only, no dependencies to install.
+
 on:
   schedule:
     - cron: "23 */6 * * *"   # every 6 hours
@@ -8,6 +11,7 @@ on:
     paths:
       - config.json
       - scripts/**
+      - assets/strings.json
       - assets/fonts/**
       - assets/logos/**
       - .github/workflows/terminal.yml
@@ -25,15 +29,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: 20
+          python-version: "3.12"
 
-      - name: Collect telemetry and render
-        run: node scripts/generate.mjs
+      - name: Collect telemetry (repos, commits, followers, views, top languages)
+        run: python scripts/telemetry.py
         env:
-          # Optional: create a TERMINAL_TOKEN secret (PAT) to include private data.
+          # github.token reads public data. Create a TERMINAL_TOKEN secret (a PAT)
+          # only if you want private repositories/contributions counted.
           GH_TOKEN: ${{ secrets.TERMINAL_TOKEN || github.token }}
+
+      - name: Render assets/terminal.svg
+        run: python scripts/render.py
 
       - name: Publish
         run: |

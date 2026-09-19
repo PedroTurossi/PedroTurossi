@@ -1,0 +1,3 @@
+# Keep the generator scripts out of the GitHub language stats,
+# so they do not inflate "Python" in the terminal or on the profile.
+scripts/** linguist-vendored

@@ -1,0 +1,17 @@
+Oi Pedro! Executa tudo isso com o Powershell dentro da tua pasta que tu vai mandar pro git.
+
+$src  = "C:\Users\T-GAMER\Downloads\Terminal-atualizado"
+$work = Join-Path (Split-Path $src -Parent) "PedroTurossi-repo"
+
+foreach ($f in "config.json", "README.md", "scripts\render.py", "scripts\telemetry.py", ".github\workflows\terminal.yml") {
+    if (-not (Test-Path (Join-Path $src $f))) { throw "Missing $f in $src" }
+}
+if (Test-Path $work) { throw "$work already exists" }
+
+git clone https://github.com/PedroTurossi/PedroTurossi.git $work
+Get-ChildItem -Path $src -Force | Where-Object { $_.Name -notin ".git", "data" } | Copy-Item -Destination $work -Recurse -Force
+Set-Location $work
+
+git add -A
+git commit -m "Terminal README: BOMBA FINAL"
+git push origin HEAD
