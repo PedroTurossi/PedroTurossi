@@ -38,7 +38,7 @@ jobs:
         env:
           # github.token reads public data. Create a TERMINAL_TOKEN secret (a PAT)
           # only if you want private repositories/contributions counted.
-          GH_TOKEN: ${{ secrets.TERMINAL_TOKEN || github.token }}
+          GH_TOKEN: ${{ secrets.TERMINAL_READONLY_TOKEN || github.token }}
 
       - name: Render assets/terminal.svg
         run: python scripts/render.py
@@ -50,7 +50,17 @@ jobs:
             echo "nothing changed"
             exit 0
           fi
+      
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      
           git commit -m "chore(terminal): sync telemetry"
-          git push
+      
+          git fetch origin main
+          git rebase origin/main || {
+            git checkout --theirs assets/terminal.svg data/telemetry.json
+            git add assets/terminal.svg data/telemetry.json
+            GIT_EDITOR=true git rebase --continue
+          }
+      
+          git push origin main
