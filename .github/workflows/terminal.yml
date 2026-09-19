@@ -50,8 +50,17 @@ jobs:
             echo "nothing changed"
             exit 0
           fi
+      
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      
           git commit -m "chore(terminal): sync telemetry"
-          git pull --rebase origin main
+      
+          git fetch origin main
+          git rebase origin/main || {
+            git checkout --theirs assets/terminal.svg data/telemetry.json
+            git add assets/terminal.svg data/telemetry.json
+            GIT_EDITOR=true git rebase --continue
+          }
+      
           git push origin main
