@@ -78,7 +78,7 @@
         "path": "~/projects/shipping",
         "name": "Shipping System",
         "description": "Production helper for the closing and shipping stages of products.",
-        "status": "in development",
+        "status": "planning",
         "borderColor": "yellow",
         "art": "pipeline"
       },
