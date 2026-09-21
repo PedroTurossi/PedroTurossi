@@ -1,7 +1,7 @@
 {
   "version": 1,
   "username": "PedroTurossi",
-  "updatedAt": "2026-09-20T20:55:40.916Z",
+  "updatedAt": "2026-09-21T05:08:20.767Z",
   "repos": 17,
   "languageCount": 6,
   "languages": [
@@ -9,43 +9,43 @@
       "name": "Python",
       "color": "#3572A5",
       "bytes": 72405,
-      "percent": 33.033587911636694
+      "percent": 33.1395747991853
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
       "bytes": 50471,
-      "percent": 23.026561915450806
+      "percent": 23.100441677918393
     },
     {
       "name": "C#",
       "color": "#7355dd",
-      "bytes": 48575,
-      "percent": 22.161543164253192
+      "bytes": 47874,
+      "percent": 21.911801725518913
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
       "bytes": 40212,
-      "percent": 18.346062248501273
+      "percent": 18.404924823214408
     },
     {
       "name": "Java",
       "color": "#b07219",
       "bytes": 4333,
-      "percent": 1.9768598359384266
+      "percent": 1.9832025081813396
     },
     {
       "name": "C",
       "color": "#555555",
       "bytes": 3190,
-      "percent": 1.4553849242196124
+      "percent": 1.4600544659816463
     }
   ],
   "stats": {
-    "commits": 97,
+    "commits": 99,
     "followers": 6,
-    "views": 302
+    "views": 301
   },
-  "viewCounterSelfHits": 22
+  "viewCounterSelfHits": 23
 }
